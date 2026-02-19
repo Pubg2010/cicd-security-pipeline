@@ -1,0 +1,22 @@
+name: Security Scan Pipeline
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  security-scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Secret Scan (Gitleaks)
+        uses: gitleaks/gitleaks-action@v2
+
+      - name: SAST Scan (Semgrep)
+        uses: returntocorp/semgrep-action@v1
+
+      - name: Dependency Scan (OWASP Dependency Check)
+        uses: dependency-check/Dependency-Check_Action@main
