@@ -21,12 +21,6 @@ jobs:
       - name: Dependency Scan (OWASP Dependency Check)
         uses: dependency-check/Dependency-Check_Action@main
         with:
-          project: "cicd-security-pipeline"
-          path: "."
-          format: "HTML"
-- name: Dependency Scan (OWASP Dependency Check)
-        uses: dependency-check/Dependency-Check_Action@main
-        with:
           project: cicd-security-pipeline
           scan: "./"
           format: "HTML"
