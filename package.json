@@ -1,0 +1,8 @@
+{
+  "name": "cicd-security-demo",
+  "version": "1.0.0",
+  "description": "Demo project for CI/CD security pipeline",
+  "dependencies": {
+    "express": "4.17.1"
+  }
+}
