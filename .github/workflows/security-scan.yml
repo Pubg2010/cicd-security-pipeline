@@ -31,3 +31,6 @@ jobs:
         with:
           name: dependency-check-report
           path: reports/
+
+      - name: IaC Scan (Checkov)
+        uses: bridgecrewio/checkov-action@master
