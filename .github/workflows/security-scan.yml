@@ -1,5 +1,7 @@
 name: Security Scan Pipeline
 
+permissions: read-all
+
 on:
   push:
   pull_request:
